@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wangchanghua66.github.io</id>
-    <title>Black</title>
-    <updated>2021-10-13T05:53:51.197Z</updated>
+    <title>BlackStar</title>
+    <updated>2021-10-13T06:41:18.697Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wangchanghua66.github.io"/>
     <link rel="self" href="https://wangchanghua66.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://wangchanghua66.github.io/images/avatar.png</logo>
     <icon>https://wangchanghua66.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Black</rights>
+    <rights>All rights reserved 2021, BlackStar</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://wangchanghua66.github.io/post/hello-gridea/</id>
