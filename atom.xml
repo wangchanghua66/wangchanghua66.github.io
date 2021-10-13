@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wangchanghua66.github.io</id>
     <title>BlackStar</title>
-    <updated>2021-10-13T07:46:10.776Z</updated>
+    <updated>2021-10-13T08:18:38.206Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wangchanghua66.github.io"/>
     <link rel="self" href="https://wangchanghua66.github.io/atom.xml"/>
@@ -10,6 +10,79 @@
     <logo>https://wangchanghua66.github.io/images/avatar.png</logo>
     <icon>https://wangchanghua66.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, BlackStar</rights>
+    <entry>
+        <title type="html"><![CDATA[支付宝小程序近期测试状况]]></title>
+        <id>https://wangchanghua66.github.io/post/zhi-fu-bao-xiao-cheng-xu-jin-qi-ce-shi-zhuang-kuang/</id>
+        <link href="https://wangchanghua66.github.io/post/zhi-fu-bao-xiao-cheng-xu-jin-qi-ce-shi-zhuang-kuang/">
+        </link>
+        <updated>2021-10-13T08:15:54.000Z</updated>
+        <content type="html"><![CDATA[<p>支付宝小程序近期测试状况</p>
+<p>未完成：10<br>
+待处理：19<br>
+待测试：00</p>
+<p>2021.10.08<br>
+前端：<br>
+1、 隐藏在线支付首付款按钮<br>
+2、 全部代还的静态数据改为了动态数据<br>
+3、商家端 角色管理界面背景框高度写死BUG解决<br>
+4、隐藏了更改首期还款月按钮<br>
+后端：<br>
+1、充值完成小程序余额未增加修复完成<br>
+2、PC端用户管理 新增商品 所属商家与实际有的商家不符 第一个门店下面无所属门店<br>
+BUG解决<br>
+3、PC端门店管理 第一次点击所属门店下拉属性无效 第二次才有效 ---修复<br>
+4、小程序端用户在没有账单信息的时候 扣款日显示为： &quot; / &quot;</p>
+<p>2021.10.09<br>
+前端：<br>
+1、 用户端 全部待还 金额变成了 例如：¥20211008 ---已修复<br>
+2、 商家端 进入商家模式 =》 去签署 ，点击后进去点击同意后，然后返回的页面任然显示是去签署的页面；导致一直能进行去签署 期望：签署完毕后，对返回的去签署页面刷新 或 返回上上级使自然刷新   ---已修复<br>
+3、 更换手机号界面左对齐 期望：居中 ---已修复<br>
+新BUG:<br>
+小程序商家端 生成合同时的选择商品界面 之前有全部商品，现在页面为空，上方的文本框输入商品名称才会出现商品（之前有改坏了）<br>
+后端：<br>
+1、 修复了商家员工可以进商家后台的BUG<br>
+2、 判断了分期期数不超过24期<br>
+3、 修复了PC端编辑员工信息部分字段没有回显<br>
+2021.10.10<br>
+无</p>
+<p>2021.10.11<br>
+前端：	<br>
+1、用户端合同页面添加了下拉刷新<br>
+后端：<br>
+1、 修复了用户端首页 附近门店和常用门店的显示<br>
+2、 用户端下月账单、全部待还、历史账单 已转修改为动态数据<br>
+3、 历史账单改为了倒序<br>
+4、 核心计算接口已给</p>
+<p>2021.10.12</p>
+<p>前端：<br>
+1、 商家端 员工管理的搜索框 根据UI添加了一个小图标<br>
+2、 商家端 分期参数设置 分期金额限制  =》   其显示的金额缺少   ‘’￥“   --- 已修复<br>
+3、 客家端 员工管理 =》员工列表  期望： 真实用户名字和账号之间添加 个 “，”--- 已修复<br>
+4、 解决了核心计算问题<br>
+5、 商家端 员工管理 下拉框搜索解决<br>
+6、 合同列表  编辑商品 --- 已修复<br>
+后端：<br>
+1、 商家端 门店管理 门店负责人为空 --- 已修复<br>
+2、 查看平台使用协议为空白 --- 已修复<br>
+3、 商家端 员工管理 对员工姓名进行了加密<br>
+4、 PC端 添加了用户日志模块</p>
+<p>2021.10.13<br>
+前端：<br>
+问题：<br>
+1、 对生成合同页面的提交做了点击判断，但是多次点击还是提交了多个合同</p>
+<p>2、 门店冻结状态切换的按钮 文案已修改<br>
+3、 商家端 合同管理  =》生成合同 =》现有产品选择 BUG : 点开商品页是空白  必须经过上方的搜索框 搜索商品名才可以显示搜索到的商品  期望：点开商品页展示所有商品   搜索框起个筛选作用 模糊查询  --- 已修复<br>
+4、 商家端 门店管理 新增门店  BUG : 门店负责人不输入为空时可以保存成功 返回undefined 期望：门店负责人为空时提示一下，并且不能提交 --- 已修复<br>
+5、 商户端   =》   添加门店负责人  ；准备添加第二个添加不了；会自动删除</p>
+<p>后端：<br>
+1、 产品无法搜索 --- 已修复<br>
+2、 商家端 门店管理 =》门店销售员 --点击解绑期望删除此项信息内容；而不是仍然存在 ---已修复<br>
+3、 商家端 门店管理 门店列表  =》点击修改期望回显的门店销售员昵称得到加密；门店负责人回显的是真实姓名，且加密 --- 已修复 <br>
+接口：<br>
+1、 商家端 账务管理 全部待还  期望： 倒序 --- 已修复<br>
+2、 用户端 历史账单 里面显示信息现在为正序 期望： 改为倒序 --- 已修复</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://wangchanghua66.github.io/post/hello-gridea/</id>
