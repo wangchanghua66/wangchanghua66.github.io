@@ -3227,3 +3227,12 @@ a {
     margin-bottom: 10px;
   }
 }
+
+        #sitegotimeDate,#sitegotimes,#footinfo,#footinfo a{
+          color: #495057;
+        }
+      
+        .mobiledescribtion{
+          color: #495057;
+        }
+      

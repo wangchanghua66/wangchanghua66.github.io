@@ -93,7 +93,7 @@
                         src='https://wangchanghua66.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://wangchanghua66.github.io/images/avatar.png?v=1634113114904" class="avatar">
+            <img src="https://wangchanghua66.github.io/images/avatar.png?v=1634113654030" class="avatar">
         </div>
         <div class="sitename">BlackStar</div>
         <span class="description" data-text='["温故而知新"]'>&nbsp;</span>
@@ -116,6 +116,9 @@
         <span></span>
         
         
+        <a onclick="showqq()"><i style="font-size: 20px;"><img class="icon"
+                    src="https://wangchanghua66.github.io/media/images/QQ.png" alt=""></i></a>
+        
         
         
         
@@ -123,7 +126,7 @@
         
         
     </div>
-    <div id="qq" style="display:none"></div>
+    <div id="qq" style="display:none">1837141093</div>
     <!------------ 加载菜单按钮👇 ------------------------->
     <div class="menucontainer">
         
@@ -213,11 +216,15 @@
                 href="https://github.com/850552586/gridea-theme-fog">Fog</a>
             <div>
                 
+                <div id="sitegotimeDate">载入天数...</div>
+                <div id="sitegotimes">载入时分秒...</div>
+                <div id="cussitetime" style="display:none">13/10/2021</div>
+                
             </div>
             <div>
                 
             </div>
-            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020  备案号: 鄂ICP备...号
+            <div class="copyright" style="color:white;text-align: center;">
             </div>
         </div>
 
@@ -225,6 +232,38 @@
 
     </div>
 </body>
+
+<script>
+    //----------------------站点运行时间
+    var now = new Date();
+
+    function createtime() {
+        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+
+    let intervalId = setInterval("createtime()", 250);
+</script>
 
     </div>
 
@@ -280,7 +319,7 @@
     
     
     <script>
-        let shareChoice = false
+        let shareChoice = true
     </script>
     
     
@@ -909,7 +948,7 @@ menulist.eq(i).show();
                         <!-- 移动端欢迎页 -->
 <div class="welcome">
     <div class="avatar-border">
-        <img src="https://wangchanghua66.github.io/images/avatar.png?v=1634113114904" class="avatar">
+        <img src="https://wangchanghua66.github.io/images/avatar.png?v=1634113654030" class="avatar">
     </div>
     <span class="mobiledescribtion"></span>
 </div>
@@ -999,59 +1038,147 @@ menulist.eq(i).show();
                     <link rel="stylesheet" href="https://wangchanghua66.github.io/media/css/font-awesome.css">
 
 
-<div id="post-container">
+    <div style="display: none;">
+        
+            
+                
+                    <span name="plfeature">/media/images/postdefault.png</span>
+                    
+                
+            <span name="pltitle">支付宝小程序近期测试状况</span>
+            <span name="pllink">https://wangchanghua66.github.io/post/zhi-fu-bao-xiao-cheng-xu-jin-qi-ce-shi-zhuang-kuang/</span>
+            <span name="pldate">2021-10-13</span>
+            <span name="plstats">4 min read</span>
+            
+        
+            
+                <span name="plfeature">https://wangchanghua66.github.io/post-images/hello-gridea.png</span>
+                
+            <span name="pltitle">Hello Gridea</span>
+            <span name="pllink">https://wangchanghua66.github.io/post/hello-gridea/</span>
+            <span name="pldate">2018-12-12</span>
+            <span name="plstats">2 min read</span>
+            
+                <span name="pltag" alt="Hello Gridea">Gridea</span>
+                <span name="pltaglink" alt="Hello Gridea">https://wangchanghua66.github.io/tag/0Wg-15MPG/</span>
+            
+        
+    </div>
+
     
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://wangchanghua66.github.io/post/zhi-fu-bao-xiao-cheng-xu-jin-qi-ce-shi-zhuang-kuang/" class="apost">
-            <div id="post" style="width:100%">
-                
-                <img src="/media/images/postdefault.png" class="postimage">
-                
-            <div class="posttitlebox">
-                <div class="posttitle" >
-                支付宝小程序近期测试状况
-            </div>
-    </div>
-</div>
-</a>
-<div class="postinfo">
-    <div class="postdate"><i class="fa fa-calendar"></i>2021-10-13</div>
-    <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 4 min read</div>
-    <div class="posttag">
-        
-    </div>
-</div>
-
-</div>
-
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://wangchanghua66.github.io/post/hello-gridea/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://wangchanghua66.github.io/post-images/hello-gridea.png" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        Hello Gridea
+    <div id="post-container" class="eleg-allpostscontainer">
+        <div v-for="post in postinfo" class="eleg-posts">
+            <div v-if="post.elegcontainer=='eleg-postcontainer-left'">
+                    <div :class="post.elegcontainer">
+                        <img :src="post.feature" alt="" :class="post.imgclass">
+                        
+                        <img class="eleg-swordsmen-left" src="https://wangchanghua66.github.io/media/images/swordsmenleft.webp" alt="">
+                        
+                        <div class="eleg-info">
+                            <span class="eleg-title">{{post.title}}</span>
+                            <div style="margin-top:15px;">
+                                <span class="postdate eleg-date"><i class="fa fa-calendar"></i>{{post.date}}</span>
+                                <span class="poststatus postdate eleg-stats"><i class="fa fa-clock-o"></i> {{post.stats}}</span>
+                            </div>
+                            <div style="margin-top:50px">
+                                <a :href="post.link" class="eleg-btn" data-pjax>阅读全文</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div class='eleg-tags'>
+                        <div v-for="(tag,i) in post.tags">
+                            <div class="posttag">
+                                <a data-pjax :href="post.taglink[i]" class="postlink eleg-postlink">
+                                    <i class="fa fa-tag"></i>{{tag}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
             </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2018-12-12</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://wangchanghua66.github.io/tag/0Wg-15MPG/" class="postlink">
-                    <i class="fa fa-tag"></i> Gridea
-                </a>
-                
+            <div v-else>
+                    <div :class="post.elegcontainer">
+                        <div class="eleg-info">
+                            <span class="eleg-title">{{post.title}}</span>
+                            <div style="margin-top:15px;">
+                                <span class="postdate eleg-date"><i class="fa fa-calendar"></i>{{post.date}}</span>
+                                <span class="poststatus postdate eleg-stats"><i class="fa fa-clock-o"></i> {{post.stats}}</span>
+                            </div>
+                            <div style="margin-top:50px">
+                                <a :href="post.link" class="eleg-btn" data-pjax>阅读全文</a>
+                            </div>
+                        </div>
+                        
+                        <img class="eleg-swordsmen" src="https://wangchanghua66.github.io/media/images/swordsmen.webp" alt="">
+                        
+                        <img :src="post.feature" alt="" :class="post.imgclass">
+                    </div>
+                    <div class='eleg-tags'>
+                        <div v-for="(tag,i) in post.tags">
+                            <div class="posttag">
+                                <a data-pjax :href="post.taglink[i]" class="postlink eleg-postlink">
+                                    <i class="fa fa-tag"></i>{{tag}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
-        
-</div>
+    </div>
 
-</div>
+    
+    <script>
+    var app2 = new Vue({
+      el: '#post-container',
+      mounted:function(){
+        this.getpostInfo();
+      },
+      methods:{
+         getpostInfo:function(){
+             var plflist = $("span[name='plfeature']");
+             var pltlist = $("span[name='pltitle']");
+             var plllist = $("span[name='pllink']");
+             var pldlist = $("span[name='pldate']");
+             var plslist = $("span[name='plstats']");
+             var pltaglist = $("span[name='pltag']");
+             var pltaglinklist = $("span[name='pltaglink']")
+             for(var i=0;i<this.pagesize&&i<plflist.length;i++){
+                 var d = {};
+                 var tags = []
+                 var taglink = []
+                 d["feature"] = plflist.eq(i).html();
+                 d["title"] = pltlist.eq(i).html();
+                 d["link"] = plllist.eq(i).html();
+                 d["date"] = pldlist.eq(i).html();
+                 d['stats'] = plslist.eq(i).html();
+                 for(var j=0;j<pltaglist.length;j++){
+                     if(pltaglist.eq(j).attr('alt')==d['title'])
+                        tags.push(pltaglist.eq(j).html())
+                 }
+                 d["tags"] = tags;
+                 for(var j=0;j<pltaglinklist.length;j++){
+                    if(pltaglinklist.eq(j).attr('alt')==d['title'])
+                        taglink.push(pltaglinklist.eq(j).html())
+                 }
+                 d["taglink"] = taglink
+                 if(i%2==0)
+                 {
+                     d['elegcontainer'] = 'eleg-postcontainer-left';
+                     d['imgclass'] = 'eleg-img-left'
+                 }
+                 else{
+                    d['elegcontainer'] = 'eleg-postcontainer-right';
+                    d['imgclass'] = 'eleg-img-right' 
+                 }
+                 this.postinfo.push(d);
+             }
+         }
+      },
+      data: {
+        pagesize: "10",
+        postinfo:[],
+      }
+    })
+    </script>
 
 
                     <div>

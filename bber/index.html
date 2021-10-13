@@ -120,7 +120,7 @@ $(document).ready(function(){
                         src='https://wangchanghua66.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://wangchanghua66.github.io/images/avatar.png?v=1634113114904" class="avatar">
+            <img src="https://wangchanghua66.github.io/images/avatar.png?v=1634113654030" class="avatar">
         </div>
         <div class="sitename">BlackStar</div>
         <span class="description" data-text='["温故而知新"]'>&nbsp;</span>
@@ -143,6 +143,9 @@ $(document).ready(function(){
         <span></span>
         
         
+        <a onclick="showqq()"><i style="font-size: 20px;"><img class="icon"
+                    src="https://wangchanghua66.github.io/media/images/QQ.png" alt=""></i></a>
+        
         
         
         
@@ -150,7 +153,7 @@ $(document).ready(function(){
         
         
     </div>
-    <div id="qq" style="display:none"></div>
+    <div id="qq" style="display:none">1837141093</div>
     <!------------ 加载菜单按钮👇 ------------------------->
     <div class="menucontainer">
         
@@ -240,11 +243,15 @@ $(document).ready(function(){
                 href="https://github.com/850552586/gridea-theme-fog">Fog</a>
             <div>
                 
+                <div id="sitegotimeDate">载入天数...</div>
+                <div id="sitegotimes">载入时分秒...</div>
+                <div id="cussitetime" style="display:none">13/10/2021</div>
+                
             </div>
             <div>
                 
             </div>
-            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020  备案号: 鄂ICP备...号
+            <div class="copyright" style="color:white;text-align: center;">
             </div>
         </div>
 
@@ -252,6 +259,38 @@ $(document).ready(function(){
 
     </div>
 </body>
+
+<script>
+    //----------------------站点运行时间
+    var now = new Date();
+
+    function createtime() {
+        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+
+    let intervalId = setInterval("createtime()", 250);
+</script>
 
     </div>
 
@@ -307,7 +346,7 @@ $(document).ready(function(){
     
     
     <script>
-        let shareChoice = false
+        let shareChoice = true
     </script>
     
     
